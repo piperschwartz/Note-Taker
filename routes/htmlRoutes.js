@@ -25,7 +25,7 @@ module.exports = function(app) {
         "*",
         function(req, res) {
             console.log(`Received a ${req.method} from URL ${req.url}`)
-            res.sendFile(path.join(__dirname, "../public/index.html"));
+            res.sendFile(path.join(__dirname, "db.json"));
         }
     )
 
