@@ -1,8 +1,6 @@
 var path= require("path");
 var fs = require("fs");
 
-
-
 module.exports = function(app) {
 
     app.get(
@@ -18,16 +16,14 @@ module.exports = function(app) {
         function(req, res) {
             console.log(`Received a ${req.method} from URL ${req.url}`)
             res.sendFile(path.join(__dirname, "../public/notes.html"));
-        }
-    )
+        })
 
     app.post(
         "*",
         function(req, res) {
             console.log(`Received a ${req.method} from URL ${req.url}`)
-            res.sendFile(path.join(__dirname, "db.json"));
-        }
-    )
+            res.sendFile(path.join(__dirname, "../public/index.html"));
+        })
 
 
 };
